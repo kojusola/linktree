@@ -1,0 +1,254 @@
+.container {
+  padding: 2rem 1rem;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+.user-image {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #8989c7;
+}
+
+.user-name {
+  font-weight: 500;
+  margin-top: 1rem;
+  font-size: 32px;
+  color: var(--koii-white);
+}
+
+.user-desc {
+  margin-top: 0.7rem;
+  font-weight: 300;
+  text-align: center;
+  font-size: 14px;
+  width: 30%;
+  font-weight: 500;
+  color: var(--koii-white);
+}
+
+.message-container {
+  height: 70vh;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.connect-wallet-button {
+  background: transparent;
+  border: 1px solid var(--koii-white);
+  border-radius: 50px;
+  padding: 1.5rem;
+  color: var(--koii-white);
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+.connect-wallet-button:hover {
+  background: var(--koii-mint);
+  color: var(--koii-blue);
+  border: none;
+}
+
+.public-key {
+  border: 1px solid #a59ad0;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  font-size: 16px;
+  color: var(--koii-white);
+  display: inline-block;
+  align-self: flex-end;
+  color: #a59ad0;
+  margin-bottom: 1rem;
+}
+
+.auth-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.links {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.link {
+  display: block;
+  text-align: center;
+  padding: 0.8rem;
+  outline: 2px solid var(--koii-white);
+  border-radius: 20px;
+  width: 300px;
+  color: #171753;
+  background-color: var(--koii-mint);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+.link:hover {
+  background-color: transparent;
+  color: var(--koii-white);
+}
+
+.title {
+  font-size: 16px;
+}
+
+.title-1 {
+  margin: 2rem 0;
+}
+
+.footer {
+  color: var(--koii-white);
+  font-size: 14px;
+  margin-top: 4rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.by-koii {
+  text-decoration: none;
+  color: var(--koii-mint);
+}
+.by-koii:hover {
+  text-decoration: underline;
+}
+
+.public-key-input-container {
+  padding-top: 15rem;
+}
+
+.input-container {
+  display: flex;
+}
+
+.public-key-input {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--koii-white);
+  padding: 1rem;
+  color: var(--koii-white);
+  font-size: 20px;
+  outline: 0;
+  width: 320px;
+  transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.public-key-input:hover {
+  border-bottom: 1px solid var(--koii-mint);
+}
+
+.submit {
+  width: 100px;
+  border-radius: 50px;
+  background: var(--koii-mint);
+  color: var(--koii-blue);
+  font-weight: 600;
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+  border: 1px solid var(--koii-mint);
+}
+
+.submit:hover {
+  border: 1px solid var(--koii-white);
+  background: transparent;
+  color: var(--koii-white);
+}
+
+.text-mint {
+  color: var(--koii-mint);
+}
+
+.error {
+  font-size: 14px;
+  color: rgb(247, 104, 104);
+  text-align: left;
+  margin-top: 10px;
+}
+
+.input-border {
+  border-color: var(--koii-white) !important;
+}
+
+@media screen and (max-width: 600px) {
+  .links {
+    width: 100%;
+  }
+  .user-desc {
+    width: 80%;
+  }
+  .message-container {
+    font-size: 16px;
+  }
+  .public-key {
+    margin-bottom: 3rem;
+  }
+
+  .createLinktree {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .public-key-input {
+    width: 240px;
+    padding: 0.7rem;
+  }
+  .public-key-input-container h1 {
+    font-size: 20px;
+  }
+  .submit {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .public-key-input {
+    width: 200px;
+    padding: 0.7rem;
+  }
+
+  .submit {
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .links,
+  .user-desc {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .links,
+  .user-desc {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .links,
+  .user-desc {
+    width: 80%;
+  }
+}
