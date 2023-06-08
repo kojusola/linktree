@@ -22,7 +22,7 @@ function LinksComponent() {
     async function getUserData() {
       const response = await getLinktrees(query, apiUrl);
       console.log(response);
-      setUserData(response.data.data.linktree);
+      setUserData(response?.data?.data?.linktree);
     }
     async function getAuth() {
       if (!publicKey) {
