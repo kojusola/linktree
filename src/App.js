@@ -1,8 +1,21 @@
 import "./App.css";
-import HomePage from "./pages/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import LinksComponent from "./pages/LinksComponent";
+import CreateLinktree from "./pages/CreateLinktree";
 
-const App = () => {
-  return <HomePage />;
-};
+function App() {
+  return (
+    <>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/linktree/:id' element={<LinksComponent />} />
+          <Route path='/createlinktree' element={<CreateLinktree />} />
+        </Routes>
+      </Router>
+    </>
+  );
+}
 
 export default App;
