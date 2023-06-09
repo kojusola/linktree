@@ -23,6 +23,7 @@ function LinksComponent() {
     async function getUserData() {
       const response = await getLinktrees(query, apiUrl);
       setUserData(response?.data?.data?.linktree);
+      return response?.data?.data?.linktree;
     }
     async function getAuth() {
       setConnected(true);
@@ -40,8 +41,22 @@ function LinksComponent() {
       }
       const showData = await getAuthList(publicKey, apiUrl);
       if (showData) {
-        await getUserData();
+        const userData = await getUserData();
         setIsLoading(false);
+        if (!userData && query === publicKey) {
+          toast({
+            title: "No Linktree profile for this public key",
+            description: "You'll be redirected to create your profile",
+            status: "error",
+            duration: 3000,
+            isClosable: true,
+            position: "top",
+          });
+          setTimeout(() => {
+            navigate("/createlinktree");
+          }, 3000);
+          return;
+        }
       } else {
         toast({
           title: "You are not authorized to view linktree profiles",
