@@ -9,9 +9,9 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/linktree/:id' element={<LinksComponent />} />
-          <Route path='/createlinktree' element={<CreateLinktree />} />
+          <Route exact path='/' element={<Home />} />
+          <Route exact path='/linktree/:id' element={<LinksComponent />} />
+          <Route exact path='/createlinktree' element={<CreateLinktree />} />
         </Routes>
       </Router>
     </>
